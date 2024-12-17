@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후쿠사이 명화 소개</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>호쿠사이 화가 명화소개</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">홈</a></li>
+                <li><a href="#" onclick="showSection('gallery')">갤러리</a></li>
+                <li><a href="#" onclick="showSection('about')">소개</a></li>
+                <li><a href="#" onclick="showSection('contact')">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content active">
+            <h2>환영합니다!</h2>
+            <p>호쿠사이의 다양한 명화를 둘러보세요.</p>
+            <button onclick="alert('즐거운 관람 되세요!')">자세히 보기</button>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section id="gallery" class="content">
+            <h2>📸 사진 갤러리</h2>
+            <div class="gallery-container">
+                <img src="https://i.imgur.com/YxhoNxV.jpeg" alt="사진1" width="300" height="200">
+                <img src="https://i.imgur.com/4YR4KH6.jpeg" alt="사진2" width="300" height="200">
+                <img src="https://i.imgur.com/x5PLN4h.jpeg" alt="사진3" width="300" height="200">
+                <img src="https://i.imgur.com/HXqfqbb.jpeg" alt="사진4" width="300" height="200">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content">
+            <h2>소개</h2>
+            <p>가츠시카 호쿠사이(일본어: 葛飾 北斎, かつしか ほくさい, 1760년 10월 31일? ~ 1849년 5월 10일)는 일본 에도 시대의 우키요에 화가입니다. 그는 생애 동안 3만 장 넘는 작품을 발표하며, 판화뿐만 아니라 직접 그린 그림에서도 뛰어난 업적을 남겼습니다. 호쿠사이의 작품은 고흐 등 인상파 화가들에게도 영향을 주었으며, 그의 예술적 유산은 오늘날까지 이어지고 있습니다.</p>
+            <p>호쿠사이는 예술가로서 70년 이상 책 일러스트와 목판화, 스케치, 그리고 그림을 위한 디자인을 만들었습니다. 그의 영향력은 19세기 유럽 서부 동시대인들에게까지 뻗쳤습니다. 일본 미술품, 특히 우키요에에 대한 수집 열풍은 호쿠사의 작품에 대한 관심을 높였고, 1856년 프랑스 예술가 펠릭스 브라크몽이 호쿠사이의 복사본을 접하면서 그의 작품이 유럽에 알려졌습니다.</p>
+            <p>그의 작품은 클로드 모네, 피에르 오귀스트 르누아르 등 인상주의 화가들뿐만 아니라 독일의 아르누보 운동에도 영향을 미쳤습니다.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content">
+            <h2>연락처</h2>
+            <p>📧 이메일: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+            <p>📞 전화번호: 010-6625-1806</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 호쿠사이 명화 소개. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
